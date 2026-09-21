@@ -1,0 +1,6 @@
+{
+  "graph_family": ["random_regular", "watts_strogatz", "sbm", "preferential_attachment"],
+  "J": [0.0, 3.0],
+  "q": [0.55, 0.65],
+  "rho_in": [0.0, 0.25]
+}

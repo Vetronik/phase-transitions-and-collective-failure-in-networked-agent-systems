@@ -1,0 +1,20 @@
+{
+  "run_key": "mechanism_v1_fresh",
+  "stage": "mechanism_correlation",
+  "model": "binary_heat_bath",
+  "N": 128,
+  "graph_family": "random_regular",
+  "degree": 8,
+  "normalization": "symmetric",
+  "connected": true,
+  "J": 0.0,
+  "q": 0.55,
+  "H": 0.5,
+  "rho_in": 0.0,
+  "horizon": 100,
+  "checkpoints": [0, 1, 5, 10, 25, 50, 100],
+  "initial": "natural",
+  "graph_count": 4,
+  "signal_count": 10,
+  "trajectory_count": 1
+}

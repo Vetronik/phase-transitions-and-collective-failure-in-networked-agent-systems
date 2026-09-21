@@ -1,0 +1,8 @@
+{
+  "critical_coupling_H0": 1.0,
+  "critical_coupling_H05": 1.2715403174076216,
+  "fixed_points": [
+    0.0
+  ],
+  "detailed_balance_residual": 1.734723475976807e-18
+}

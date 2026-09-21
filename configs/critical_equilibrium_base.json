@@ -1,0 +1,20 @@
+{
+  "run_key": "critical_equilibrium_v1",
+  "stage": "equilibrium_criticality",
+  "model": "binary_heat_bath",
+  "graph_family": "complete",
+  "degree": 8,
+  "normalization": "symmetric",
+  "N": 16,
+  "J": 1.0,
+  "q": 0.5,
+  "H": 0.0,
+  "rho_in": 0.0,
+  "graph_count": 1,
+  "signal_count": 1,
+  "chain_count": 10,
+  "burnin": 200,
+  "samples": 20,
+  "thin": 10,
+  "initial": "random"
+}

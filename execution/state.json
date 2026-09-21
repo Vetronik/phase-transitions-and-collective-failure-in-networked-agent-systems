@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-07",
+  "status": "evidence_package_complete_reduced_scope",
+  "package_version": "0.1.0",
+  "python": "3.14.4",
+  "tests": {"pytest": 9, "passed": 9},
+  "completed_batches": [
+    "E00 smoke",
+    "E10 reduced pilot",
+    "E20 reduced confirmation",
+    "E60 mechanism",
+    "E30 reduced size-time",
+    "E40 complete-graph benchmark",
+    "replication_v1",
+    "topology_v1",
+    "critical_equilibrium_v1"
+  ],
+  "pending_batches": [
+    "E70 interventions",
+    "full equilibrium finite-size scaling",
+    "optional LLM validation"
+  ],
+  "thermodynamic_phase_claim": false,
+  "last_audit": "python -m collective_agents.cli audit-configs --directory configs"
+}

@@ -1,0 +1,20 @@
+{
+  "run_key": "critical_benchmark_v1",
+  "stage": "criticality_benchmark",
+  "model": "binary_heat_bath",
+  "N": 16,
+  "graph_family": "complete",
+  "degree": 8,
+  "normalization": "symmetric",
+  "connected": true,
+  "J": 1.0,
+  "q": 0.5,
+  "H": 0.0,
+  "rho_in": 0.0,
+  "horizon": 200,
+  "checkpoints": [0, 10, 50, 100, 200],
+  "initial": "natural",
+  "graph_count": 1,
+  "signal_count": 1,
+  "trajectory_count": 10
+}

@@ -1,0 +1,4 @@
+date,batch,deviation,reason,impact,action
+2026-09-07,replication_v1,N=128 and T=100 instead of N=256 and T=200,Allows 100 graph-signal pairs per primary cell in the available compute budget,Tests replication at a second scale rather than replacing the original N=256 evidence,Report original and replication batches separately
+2026-09-07,topology_v1,Four topology families at N=128 with 25 graph-signal pairs per cell,Resource-limited robustness screen,Not used for asymptotic topology claims,Expand before submission
+2026-09-07,critical_equilibrium_v1,N<=64 and 10 chains per condition,Transparent sampler and finite compute,Resolves equilibrium-vs-finite-time distinction at small sizes but not thermodynamic limit,Expand to larger N after validating mixing

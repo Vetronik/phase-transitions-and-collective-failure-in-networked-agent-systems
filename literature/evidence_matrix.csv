@@ -1,0 +1,13 @@
+citation_key,role,agent_or_system,communication_or_model,information_quality_or_error_control,transition_or_failure_evidence,relevance_to_current_project,verification_status
+degroot1974,foundational baseline,human opinions,weighted averaging,not explicit,consensus dynamics,linear comparator,original PDF checked
+friedkin_johnsen1990,foundational baseline,human opinions,persistent social influence,initial anchors,convergence,alternative model,repository page checked
+bikhchandani1992,mechanism theory,informational cascades,sequential observation,private-signal uncertainty,cascade mistakes,correlated-error mechanism,publisher page checked
+golub_jackson2010,network learning theory,agents,weighted neighbor averaging,independent noisy signals,influence concentration,network accuracy baseline,AEA page checked
+lorenz2011,empirical failure,human groups,average/full social information,estimation questions,diversity loss without accuracy gain,accuracy/agreement distinction,PMC full text checked
+becker_brackbill_centola2017,empirical benefit,human networks,decentralized social influence,network learning,accuracy improvement,beneficial influence comparator,PMC page checked
+jayles2017,empirical information quality,human groups,controlled social information,virtual truthful and incorrect participants,quality-dependent accuracy,quality manipulation precedent,PNAS DOI checked
+binder1981,criticality method,Ising models,Monte Carlo,thermal states,Binder scaling,finite-size diagnostic,APS abstract checked
+hong_ha_park2007,criticality method,complex networks,finite-size scaling,network degree distributions,network-dependent exponents,scaling caution,arXiv page checked
+physics_of_agents_2026,closest recent work,LLM communities,opinion exchange,objective/subjective prompts,finite-size critical temperature analogue,mandatory novelty comparison,arXiv HTML checked
+interaction_tax_2026,closest recent work,LLM teams,full-solution interaction,matched budgets,interaction-induced diversity loss,communication-budget comparison,arXiv HTML checked
+du_et_al_2023,LLM baseline,language-model agents,multi-agent debate,answer evaluation,factuality gains,optional validation only,arXiv page checked

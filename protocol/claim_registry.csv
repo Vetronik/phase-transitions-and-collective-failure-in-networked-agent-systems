@@ -1,0 +1,8 @@
+claim_id,claim,required_evidence,status,allowed_wording
+C1,Communication can improve individual accuracy under sufficiently diverse inputs,Fresh replicated paired accuracy contrast at rho_in=0, supported in tested cells,"in this model and tested cells"
+C2,Communication can increase severe collective failure when inputs share errors,Fresh replicated paired tail-risk contrast plus error covariance, supported in tested cells,"in this model and tested cells"
+C3,Strong coupling produces near-consensus with near-one effective correlation,Retained terminal error vectors, supported in mechanism batch,"mechanism evidence indicates"
+C4,Failure risk remains positive as N tends to infinity,Large equilibrated finite-size study with extrapolation, unresolved, Do not claim
+C5,The application model has a thermodynamic phase transition,Equilibrium finite-size scaling and order-of-limits tests, unresolved, Do not claim
+C6,Results generalize to humans or LLMs,Empirical or matched-budget validation, unresolved, Do not claim
+C7,The critical benchmark recovers the exact critical point,Equilibrated benchmark with resolved crossing or analytic comparison, unresolved, Use only as a sanity-check description

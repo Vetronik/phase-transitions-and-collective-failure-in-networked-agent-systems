@@ -1,0 +1,32 @@
+# replication results ledger
+
+This file is generated from immutable run output. It is descriptive; it does not replace the preregistered analysis.
+
+Rows: 800. Conditions: 8.
+
+## Paired treatment contrasts
+
+| J | q | rho_in | delta agent accuracy | delta majority score | delta severe failure |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 0.55 | 0 | 0.2228 | 0.0600 | 0.2500 |
+| 3 | 0.55 | 0.25 | 0.0704 | 0.0100 | 0.3900 |
+| 3 | 0.65 | 0 | 0.3677 | -0.0350 | 0.0600 |
+| 3 | 0.65 | 0.25 | 0.0530 | 0.0100 | 0.3800 |
+
+## Covariance status
+
+```csv
+N,J,q,rho_in,horizon,vbar,var_loss,cbar,rho_eff,n_eff,status,samples
+128,0.0,0.55,0.0,100,0.24732578125000002,0.0019264606514362373,-5.81746351308382e-06,-2.352146017160845e-05,128.38351048883914,ok,100
+128,0.0,0.55,0.25,100,0.2462578125,0.013742133246527777,0.011911301126421697,0.04836923143878612,17.919911565565844,ok,100
+128,0.0,0.65,0.0,100,0.24254296874999998,0.0018168686375473482,-7.861246570031033e-05,-0.00032411768564332105,133.49504952510867,ok,100
+128,0.0,0.65,0.25,100,0.24278828125,0.016604836203835228,0.01482386419559771,0.061056753313120264,14.621540271136372,ok,100
+128,3.0,0.55,0.0,100,0.18874453125,0.1867170915699968,0.18670112747802828,0.9891737060754086,1.010858350796682,ok,100
+128,3.0,0.55,0.25,100,0.23803515624999994,0.23819184890901202,0.23819308270947667,1.0006634585494207,0.9993421577617799,ok,100
+128,3.0,0.65,0.0,100,0.05807890625,0.055970169221512,0.055953564992941233,0.9634059696663319,1.0376760881344183,ok,100
+128,3.0,0.65,0.25,100,0.23548828124999993,0.23608656758009797,0.236091278496083,1.002560625279875,0.9974658179995985,ok,100
+```
+
+Hierarchical uncertainty intervals are written to the accompanying CSV and resample graph clusters with signal instances nested within graphs.
+
+Interpretation rules: agreement is not accuracy; severe-failure effects are terminal risk changes; covariance must be estimated from repeated terminal error vectors and is not inferred from agreement alone.

@@ -1,0 +1,20 @@
+{
+  "run_key": "smoke_v1",
+  "stage": "smoke",
+  "model": "binary_heat_bath",
+  "N": 32,
+  "graph_family": "random_regular",
+  "degree": 8,
+  "normalization": "symmetric",
+  "connected": true,
+  "J": 1.0,
+  "q": 0.7,
+  "H": 0.5,
+  "rho_in": 0.0,
+  "horizon": 20,
+  "checkpoints": [0, 1, 5, 10, 20],
+  "initial": "natural",
+  "graph_count": 2,
+  "signal_count": 4,
+  "trajectory_count": 2
+}

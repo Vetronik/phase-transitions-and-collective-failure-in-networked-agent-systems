@@ -1,0 +1,41 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Generated package metadata and build artifacts
+src/*.egg-info/
+build/
+dist/
+*.egg
+
+# Coverage and test reports
+.coverage
+.coverage.*
+htmlcov/
+
+# Local/generated review artifacts
+output/
+
+# LaTeX auxiliary files; keep the final PDF and source
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

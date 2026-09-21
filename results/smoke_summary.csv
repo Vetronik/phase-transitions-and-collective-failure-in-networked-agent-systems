@@ -1,0 +1,2 @@
+N,J,q,rho_in,horizon,agent_accuracy_estimate,agent_accuracy_low,agent_accuracy_high,majority_score_estimate,majority_score_low,majority_score_high,agreement_estimate,agreement_low,agreement_high,severe_failure_estimate,severe_failure_low,severe_failure_high,loss_estimate,loss_low,loss_high,signed_m_estimate,signed_m_low,signed_m_high
+32,1.0,0.7,0.0,20,0.693359375,0.623046875,0.759765625,0.875,0.71875,1.0,0.39453125,0.25390625,0.52734375,0.0,0.0,0.0,0.306640625,0.236328125,0.376953125,0.38671875,0.2421875,0.53515625

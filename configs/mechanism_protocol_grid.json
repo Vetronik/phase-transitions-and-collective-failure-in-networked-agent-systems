@@ -1,0 +1,4 @@
+{
+  "protocol": ["heat_bath", "source_tagged_one_pass"],
+  "J": [0.0, 3.0]
+}

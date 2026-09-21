@@ -1,0 +1,7 @@
+batch,configuration,rows,replicas,scope_note
+E00,configs/smoke.json,16,2 graphs x 4 signals x 2 trajectories,plumbing only
+E10,configs/pilot_base.json + configs/pilot_grid.json,768,4 graphs x 4 signals x 1 trajectory x 48 cells,exploratory reduced from planned allocation
+E20,configs/confirmation_base.json + configs/confirmation_grid.json,320,4 graphs x 5 signals x 1 trajectory x 16 cells,fresh paired reduced confirmation
+E60,configs/mechanism_base.json + configs/mechanism_grid.json,640,4 graphs x 10 signals x 1 trajectory x 16 cells,terminal error vectors retained
+E30,configs/scaling_base.json + configs/scaling_grid.json,640,1 graph x 5 signals x 1 trajectory x 64 cells,reduced size/time diagnostic
+E40,configs/critical_base.json + configs/critical_grid.json,280,1 graph x 1 signal x 10 trajectories x 28 cells,finite-time complete-graph benchmark
