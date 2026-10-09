@@ -354,7 +354,7 @@ protocol/{frozen_protocol.md,deviations.csv,claim_registry.csv}
 data/{raw,processed}/
 results/{figures,tables,diagnostics}/
 analysis/{derivations.md,results_summary.md,limitations.md}
-paper/{main.tex,references.bib,sections,supplement,generated}/
+paper/{when-communication-amplifies-error.tex,references.bib,sections,supplement,generated}/
 execution/{state.json,run_manifest.parquet,resource_log.csv,decision_log.md}
 release/
 ```

@@ -33,6 +33,8 @@ output/
 *.out
 *.synctex.gz
 *.toc
+paper/*.log
+paper/*.xdv
 
 # OS/editor files
 .DS_Store

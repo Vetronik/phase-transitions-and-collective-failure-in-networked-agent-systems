@@ -2,7 +2,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper,margin=0.86in,headheight=14pt]{geometry}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=0.86in,headheight=22pt]{geometry}
 \usepackage{amsmath,amssymb,booktabs,graphicx,tabularx,array}
 \usepackage{microtype}
 \usepackage{xcolor}
@@ -11,11 +12,14 @@
 \usepackage{enumitem}
 \usepackage[round,authoryear]{natbib}
 \usepackage{fancyhdr}
+\usepackage{tocloft}
 \usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
 
 \definecolor{ink}{HTML}{1F2933}
-\definecolor{accent}{HTML}{0F766E}
-\definecolor{accentlight}{HTML}{E6F4F1}
+\definecolor{accent}{HTML}{2458A6}
+\definecolor{accentlight}{HTML}{EDF3FC}
 \definecolor{muted}{HTML}{52606D}
 
 \hypersetup{
@@ -29,10 +33,16 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.55em}
+\setlength{\emergencystretch}{2em}
 \setlist{nosep,leftmargin=*}
 \renewcommand{\arraystretch}{1.18}
 \setcounter{tocdepth}{2}
-\renewcommand{\contentsname}{Inhaltsangabe / Table of Contents}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\cftsecfont}{\bfseries\color{accent}}
+\renewcommand{\cftsecpagefont}{\bfseries\color{accent}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{0.65em}
+\setlength{\cftbeforesubsecskip}{0.15em}
 
 \titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{0.65em}{}
 \titleformat{\subsection}{\normalsize\bfseries\color{ink}}{\thesubsection}{0.55em}{}
@@ -59,41 +69,47 @@
 % --------------------------------------------------------------------------
 % Cover sheet and contents
 % --------------------------------------------------------------------------
+\hypersetup{pageanchor=false}
 \begin{titlepage}
 \thispagestyle{empty}
-\color{accent}\rule{\textwidth}{1.2pt}
-\vspace{1.1cm}
-\begin{center}
-  {\Huge\bfseries\color{ink} When Communication Amplifies Error:}\par
-  \vspace{0.35cm}
-  {\LARGE\color{ink} Correlated Collective Failure in Networked Binary Agents}\par
-  \vspace{1.0cm}
-  {\large\itshape\color{muted} A controlled computational study of information dependence, social coupling, and finite-size behavior}\par
-\end{center}
+{\color{accent}\rule{\textwidth}{2pt}}
+\vspace{0.6cm}
+{\small\bfseries\color{accent}\MakeUppercase{Computational research / Preprint}}\par
+\vspace{1.3cm}
+{\fontsize{34}{39}\selectfont\bfseries\color{ink} When Communication\\ Amplifies Error\par}
+\vspace{0.7cm}
+{\LARGE\color{accent} Correlated Collective Failure\\ in Networked Binary Agents\par}
+\vspace{0.7cm}
+{\large\color{muted} A controlled study of shared information,\\ social influence, and collective reliability\par}
 \vfill
-\begin{center}
-  \color{ink}
-  \begin{tabular}{ll}
-    \textbf{Author} & Veronika Loran \\
-    \textbf{Manuscript type} & Full research manuscript / computational study \\
-    \textbf{Version} & Results-aware preprint, version 1.1 \\
-    \textbf{Date} & 7 September 2026 \\
-  \end{tabular}
-\end{center}
+\begingroup
+\setlength{\fboxsep}{16pt}
+\colorbox{accentlight}{\begin{minipage}{\dimexpr\textwidth-32pt\relax}
+{\small\bfseries\color{accent} THE CENTRAL QUESTION}\par\medskip
+{\Large\color{ink} Can a group agree almost completely\\ and still be wrong?\par}\medskip
+{\normalsize\color{muted} Communication can combine independent evidence. It can also amplify a shared mistake. This paper measures both outcomes in a controlled model.}
+\end{minipage}}
+\endgroup
 \vfill
-\begin{center}
-  \begin{minipage}{0.82\textwidth}
-  \small\itshape\color{muted}
-  This manuscript reports a reproducible stochastic-agent study. Its principal contribution is a controlled account of how shared input errors and repeated communication alter collective performance. The finite-horizon mechanism is supported by the executed evidence package; a thermodynamic phase transition is not claimed.
-  \end{minipage}
-\end{center}
+{\Large\bfseries\color{ink} Veronika Loran}\par
+\vspace{0.3cm}
+{\small\color{muted} Results-aware preprint, version 1.1\quad /\quad 15 September 2026}\par
+\vspace{0.7cm}
+{\small\itshape\color{muted} The evidence supports a finite-horizon communication--correlation mechanism. A thermodynamic phase transition is not claimed.}\par
 \vspace{0.5cm}
-\color{accent}\rule{\textwidth}{1.2pt}
+{\color{accent}\rule{\textwidth}{2pt}}
 \end{titlepage}
 
 \clearpage
 \pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\begingroup
+\fontsize{9.5}{11.5}\selectfont
+\setlength{\parskip}{0pt}
+\setlength{\cftbeforesecskip}{0.35em}
+\setlength{\cftbeforesubsecskip}{0pt}
 \tableofcontents
+\endgroup
 \clearpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
@@ -320,7 +336,7 @@ If errors are independent and homogeneous, $N_{\mathrm{eff}}$ is close to $N$. I
 
 Point estimates are means over terminal episodes. The result files include ordinary bootstrap intervals for the compact summaries. Later replication and topology analyses additionally use a hierarchical bootstrap: graph instances are resampled at the outer level and signal instances are resampled within graph. This avoids treating multiple signals from the same graph as fully independent graph replications.
 
-The study emphasizes effect sizes and uncertainty ranges rather than a single omnibus significance test. For the primary confirmation, the ordinary bootstrap summaries in \texttt{results/confirmation\_summary.csv} resample the 20 terminal graph--signal rows within each cell. Table~\ref{tab:primaryuncertainty} additionally reports 95\% two-level bootstrap intervals for the paired effects, resampling the four graph clusters and then signal instances within each selected graph; the calculation uses 20,000 replicates and is stored in \texttt{analysis/confirmation/primary\_uncertainty.csv}. Because only four graph clusters were available, these intervals are descriptive and can be broad; they do not substitute for a larger confirmatory sample. The size/time sweep has five signal instances per cell, and the critical benchmarks have limited mixing resolution. The analysis therefore reports null, adverse, and supportive cells rather than selecting only favorable outcomes.
+The study emphasizes effect sizes and uncertainty ranges rather than a single omnibus significance test. For the primary confirmation, the ordinary bootstrap summaries in \path{results/confirmation_summary.csv} resample the 20 terminal graph--signal rows within each cell. Table~\ref{tab:primaryuncertainty} additionally reports 95\% two-level bootstrap intervals for the paired effects, resampling the four graph clusters and then signal instances within each selected graph; the calculation uses 20,000 replicates and is stored in \path{analysis/confirmation/primary_uncertainty.csv}. Because only four graph clusters were available, these intervals are descriptive and can be broad; they do not substitute for a larger confirmatory sample. The size/time sweep has five signal instances per cell, and the critical benchmarks have limited mixing resolution. The analysis therefore reports null, adverse, and supportive cells rather than selecting only favorable outcomes.
 
 \subsection{Implementation validation}
 
@@ -600,7 +616,7 @@ The result is a finite-horizon mechanism finding supported by confirmation, repl
 
 \section{Data and code availability}
 
-The execution repository contains the model code, frozen JSON configurations, raw CSV outputs, generated summaries, figures, literature evidence matrix, and protocol deviations. Principal artifacts include \texttt{results/confirmation.csv}, \texttt{results/confirmation\_summary.csv}, \texttt{results/replication.csv}, \texttt{results/mechanism.csv}, \texttt{results/mechanism\_protocol.csv}, \texttt{results/topology.csv}, \texttt{results/scaling.csv}, \texttt{results/critical.csv}, and \texttt{results/critical\_equilibrium.csv}, together with the corresponding files under \texttt{analysis/}. The paired uncertainty table is stored in \texttt{analysis/confirmation/primary\_uncertainty.csv}. The manuscript itself is generated from \texttt{paper/main.tex}; the PDF and Word files are derived deliverables.
+The execution repository contains the model code, frozen JSON configurations, raw CSV outputs, generated summaries, figures, literature evidence matrix, and protocol deviations. Principal artifacts include \path{results/confirmation.csv}, \path{results/confirmation_summary.csv}, \path{results/replication.csv}, \path{results/mechanism.csv}, \path{results/mechanism_protocol.csv}, \path{results/topology.csv}, \path{results/scaling.csv}, \path{results/critical.csv}, and \path{results/critical_equilibrium.csv}, together with the corresponding files under \path{analysis/}. The paired uncertainty table is stored in \path{analysis/confirmation/primary_uncertainty.csv}. The manuscript itself is generated from \path{paper/when-communication-amplifies-error.tex}; the PDF is the typeset deliverable.
 
 \appendix
 
@@ -614,7 +630,7 @@ The graph stream generates the adjacency matrix and the graph metadata. The sign
 
 \subsection{Batch-specific deviations}
 
-The exploratory pilot was reduced from the planned grid because the transparent reference Python engine was computationally expensive. The confirmation was executed as a reduced allocation with four graphs and five signal instances per graph. A later replication increased the number of graph--signal instances at $N=128$ and $T=100$, and a topology screen compared four sparse families with 25 instances per family and cell. The equilibrium benchmark was limited to $N\le64$ and ten chains per condition. These deviations are recorded in \texttt{protocol/deviations.csv} and \texttt{protocol/deviations\_v2.csv}; they are part of the evidence record rather than hidden exclusions.
+The exploratory pilot was reduced from the planned grid because the transparent reference Python engine was computationally expensive. The confirmation was executed as a reduced allocation with four graphs and five signal instances per graph. A later replication increased the number of graph--signal instances at $N=128$ and $T=100$, and a topology screen compared four sparse families with 25 instances per family and cell. The equilibrium benchmark was limited to $N\le64$ and ten chains per condition. These deviations are recorded in \path{protocol/deviations.csv} and \path{protocol/deviations_v2.csv}; they are part of the evidence record rather than hidden exclusions.
 
 \subsection{Reproducibility checks}
 
@@ -657,6 +673,8 @@ The following rules govern the claims in this manuscript:
   \item The binary-agent model is a reference system. Any human or LLM interpretation requires a separate, resource-matched validation study.
 \end{enumerate}
 
+\phantomsection
+\addcontentsline{toc}{section}{References}
 \bibliographystyle{plainnat}
 \bibliography{references}
 

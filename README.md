@@ -43,7 +43,7 @@ Although the repository name mentions “phase transitions,” the current evide
 
 No coding is needed to read the paper or browse the findings.
 
-- **Read the paper:** [PDF](paper/main.pdf) or [Word document](paper/main.docx).
+- **Read the paper:** [PDF](paper/when-communication-amplifies-error.pdf).
 - **Browse the main findings:** [Results summary](analysis/results_summary.md).
 - **See the charts:** [Figures](results/figures/).
 - **Understand the scope:** [Central research claim](protocol/central_claim.md) and the limitations discussed in the paper.
